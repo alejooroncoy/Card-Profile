@@ -81,14 +81,28 @@ div.card .card--footer__link.img:hover {
   opacity: 1;
 }
 
-@media screen and (max-width: 1024px) {
-  div.card {
-    padding: 2em;
-  }
+@media screen and  (max-width: 1280px) {
   div.card img.card--header__image {
     width: 10em;
     height: 10em;
   }
+  div.card h1.card--main__title {
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  div.card {
+    padding: 2em;
+    width: 50%;
+  }
+
+  div.card img.card--header__image {
+    width: 10em;
+    height: 10em;
+  }
+
+  
 }
 
 @media screen and (max-width: 728px) {
@@ -96,7 +110,14 @@ div.card .card--footer__link.img:hover {
     width: 80%;
     padding: 1em;
   } 
+  
   div.card .card--main__subtitle {
     font-size: 1.1em;
   }
+
+  div.card .card--main__description {
+    margin: 0 1em;
+  }
+
 }
+
