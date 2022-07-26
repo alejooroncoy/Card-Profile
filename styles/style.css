@@ -2,7 +2,101 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-h1.title {
-  font-size: 3em;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FBAB7E;
+  background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+
+}
+
+div.card {
+  padding: 3em 0;
+  margin: auto;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(35, 123, 255);
+  width: 40%;
+  border-radius: .3em;
+  height: 60%;
+  color: white;
+  gap: 1em 0;
+  box-shadow: 0 0 1em 0.1em #f78e53;
+}
+
+div.card header.card--header {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+div.card img.card--header__image {
+  width: 15em;
+  height: 15em;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+div.card main.card--main {
+  display: flex;
+  flex-direction: column;
+  gap: 1em 0;
+  align-items: center;
   text-align: center;
+}
+
+div.card h1.card--main__title {
+  margin: 0;
+}
+
+div.card .card--main__subtitle {
+  font-weight: 600;
+  margin: 0;
+}
+
+div.card .card--main__description {
+  margin: 0;
+} 
+
+div.card .card--footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 .5em;
+}
+
+div.card .card--footer__link.img {
+  width: 3em;
+  height: 3em;
+  opacity: 0.5;
+  transition: transform .3s, opacity .7s;
+}
+
+div.card .card--footer__link.img:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+@media screen and (max-width: 1024px) {
+  div.card {
+    padding: 2em;
+  }
+  div.card img.card--header__image {
+    width: 10em;
+    height: 10em;
+  }
+}
+
+@media screen and (max-width: 728px) {
+  div.card {
+    width: 80%;
+    padding: 1em;
+  } 
+  div.card .card--main__subtitle {
+    font-size: 1.1em;
+  }
 }
